@@ -11,6 +11,10 @@ def convert_to_128bit_uuid(short_uuid):
     return base_uuid[:4] + short_uuid_hex + base_uuid[8:]
 
 
+if len(sys.argv) != 2:
+    print("USO python3 cliente_bleak.py <1|0>")
+    exit(0)
+
 t = sys.argv[1]
 t = int(t)
 if t:
